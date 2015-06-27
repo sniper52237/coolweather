@@ -110,13 +110,13 @@ public class CoolWeatherDB {
 	/**
 	 * 将Country实例存储到数据库
 	 */
-	public void saveCountry(County county){
+	public void saveCounty(County county){
 		if (county != null) {
 			ContentValues cv = new ContentValues();
 			cv.put("county_name", county.getCountyName());
 			cv.put("county_code", county.getCountyCode());
 			cv.put("city_id", county.getCityId());
-			db.insert("City", null, cv);
+			db.insert("County", null, cv);
 		}
 	}
 	
@@ -137,15 +137,5 @@ public class CoolWeatherDB {
 			} while (cursor.moveToNext());
 		}
 		return listCounties;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }
