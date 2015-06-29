@@ -35,7 +35,6 @@ public class HttpUtil {
 						listener.onFinish(sb.toString());
 					}
 					
-					
 				} catch (Exception e) {
 					if (listener != null) {
 						listener.onError(e);
@@ -56,5 +55,4 @@ public class HttpUtil {
 			}
 		}).start();
 	}
-	
 }
